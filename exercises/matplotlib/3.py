@@ -3,6 +3,10 @@ import matplotlib.pyplot as plt
 
 
 def lissajous(angle, a, b):
+    '''
+    x(\theta) &= sin(a * \theta) \\
+    y(\theta) &= cos(b * \theta)
+    '''
     x = sin(a * angle)
     y = cos(b * angle)
     return x, y

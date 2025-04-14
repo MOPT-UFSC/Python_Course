@@ -17,7 +17,7 @@ def my_gcd(a, b):
     return my_gcd(b, a % b)
 
 
-def my_sqrt(x, max_error=1e-6):
+def my_sqrt(x, *, max_error=1e-6):
     y = x / 2
 
     while abs(y * y - x) > max_error:
@@ -73,10 +73,13 @@ def my_range(start, end=None, steps=1):
         current += steps
 
 
+def add_point(x, y, /, z=0, *, merge_coincident=True): ...
+
+
 if __name__ == "__main__":
     import math
     from random import randint
-    import sys       
+    import sys
 
     # naive = my_naive_range(0, 100_000)
     # iterator = my_range(0, 100_000)
@@ -91,4 +94,3 @@ if __name__ == "__main__":
     #     b = randint(0, 100)
     #     print(math.gcd(a, b), my_gcd(a, b))
     #     assert math.gcd(a, b) == my_gcd(a, b)
-        

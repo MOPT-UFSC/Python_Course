@@ -3,6 +3,9 @@ import matplotlib.pyplot as plt
 
 
 def heart(x):
+    '''
+    f(x) = (x^2)^{\frac{1}{3}} + 0.7 * sin(50 * x) * \sqrt{3 - x^2}
+    '''
     k = 50
     part_1 = (x**2) ** (1 / 3)
     part_2 = 0.7 * sin(k * x) * sqrt(3 - x**2)

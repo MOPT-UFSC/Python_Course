@@ -3,6 +3,11 @@ import matplotlib.pyplot as plt
 
 
 def flower_function(angle, petalas):
+    '''
+    r(\theta) &= sin(\text{petalas} * \theta) \\
+    x(\theta) &= r(\theta) * cos(\theta) \\
+    y(\theta) &= r(\theta) * sin(\theta)
+    '''
     r = sin(petalas * angle)
     x = r * cos(angle)
     y = r * sin(angle)

@@ -2,13 +2,13 @@ import matplotlib.pyplot as plt
 
 
 def example_0():
-    plt.plot([1, 2, 3, 4])
+    plt.plot([0, 1, 2, 3, 4])
     plt.show()
 
 
 def example_1():
-    plt.plot([1, 2, 3, 4])
-    plt.plot([2, 4, 6, 8])
+    plt.plot([0, 1, 2, 3, 4])
+    plt.plot([0, 2, 4, 6, 8])
     plt.show()
 
 
@@ -20,18 +20,18 @@ def example_2():
 
 def example_3():
     x = [10, 20, 30, 40]
-    y1 = [1, 2, 4, 8]
-    y2 = [2, 3, 5, 9]
-    y3 = [3, 4, 6, 10]
-    y4 = [4, 5, 7, 11]
+    y0 = [1, 2, 4, 8]
+    y1 = [2, 3, 5, 9]
+    y2 = [3, 4, 6, 10]
+    y3 = [4, 5, 7, 11]
 
-    plt.plot(x, y1, color="red", linestyle="dashed")
-    plt.plot(x, y2, color="green", linestyle="dotted")
-    plt.plot(x, y3, color="blue", linestyle="dashdot")
+    plt.plot(x, y0, color="red", linestyle="dashed")
+    plt.plot(x, y1, color="green", linestyle="dotted")
+    plt.plot(x, y2, color="blue", linestyle="dashdot")
 
     plt.plot(
         x,
-        y4,
+        y3,
         color="black",
         linestyle=(0, (5, 1, 5, 3, 1, 3)),
     )
@@ -66,8 +66,22 @@ def example_6():
     y1 = [(x**2) for x in x0]
     y2 = [(x * 80) for x in x0]
 
-    plt.plot(x0, y1, color="red", marker="o", markevery=[0, 36, -1])
-    plt.plot(x0, y2, color="green", marker="+", markevery=slice(40, 50, 2))
+    plt.plot(
+        x0,
+        y1,
+        color="red",
+        marker="o",
+        markevery=[0, 36, -1],
+    )
+
+    plt.plot(
+        x0,
+        y2,
+        color="green",
+        marker="+",
+        markevery=slice(40, 50, 2),
+    )
+
     plt.show()
 
 
@@ -195,6 +209,3 @@ def example_15():
     ax[1][1].plot([4, 8, 12, 16], color="black")
 
     plt.show()
-
-
-example_15()
