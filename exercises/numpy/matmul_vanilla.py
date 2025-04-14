@@ -1,7 +1,5 @@
-import numpy as np
-from random import randint, seed
-from time import time
-from pprint import pprint
+from random import randint
+import sys
 
 
 def random_matrix(n):
@@ -22,16 +20,8 @@ def matmul(m1, m2):
                 result[i][j] += m1[i][k] * m2[k][j]
     return result
 
-n = 1000
-a = random_matrix(n)
-b = random_matrix(n)
 
-start = time()
-x = matmul(a, b)
-end = time()
-print("Python time", end - start)
-
-start = time()
-y = np.matmul(a, b)
-end = time()
-print("Numpy time", end - start)
+n = int(sys.argv[1])
+m1 = random_matrix(n)
+m2 = random_matrix(n)
+result = matmul(m1, m2)

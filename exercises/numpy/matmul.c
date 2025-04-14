@@ -30,26 +30,11 @@ int* matmul(int* m1, int* m2, int n) {
     return result;
 }
 
-int millis()
-{
-    struct timespec now;
-    timespec_get(&now, TIME_UTC);
-    return ((int) now.tv_sec) * 1000 + ((int) now.tv_nsec) / 1000000;
-}
 
-
-int main() {
-    srand(0);
-    int n = 1000;
-
-    float start, end;
+int main(int argc, char *argv[]) {
+    int n = atoi(argv[1]);
     int* m1 = random_matrix(n);
     int* m2 = random_matrix(n);
-
-    start = (float) millis();
     int* result = matmul(m1, m2, n);
-    end = (float) millis();
-
-    printf("C time: %f\n", (end - start) / 1000);
     return 0;
 }
